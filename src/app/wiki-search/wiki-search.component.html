@@ -1,0 +1,10 @@
+<h4>Wiki Search</h4>
+<input [(ngModel)] = "searchText"  type ="text" placeholder = "Search..."> 
+<button (click)=getWiki()> Get Wiki</button>
+
+
+<div *ngFor ="let result of resArr">
+  
+  <div>{{result.title+""}}</div>
+
+</div>

@@ -1,0 +1,10 @@
+<h4> Giphy Search</h4>
+<input [(ngModel)] = "searchText"  type ="text" placeholder = "Search..."> 
+<button (click)=getImage()> Get Image</button>
+<br/>
+<br/>
+<div *ngFor ="let data of dataArr">
+  <img src = {{data.images.fixed_height_downsampled.url}}>
+  <br/>
+  <br/>
+</div>
