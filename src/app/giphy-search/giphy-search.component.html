@@ -1,6 +1,8 @@
 <h4> Giphy Search</h4>
-<input [(ngModel)] = "searchText"  type ="text" placeholder = "Search..."> 
-<button (click)=getImage()> Get Image</button>
+<div class="form-inline">
+  <input [(ngModel)] = "searchText"  class="form-control" type ="text" placeholder = "Search..."> 
+  <button (click)=getImage() class="btn btn-secondary" style="margin-left: 10px;"> Get Image</button>
+</div>
 <br/>
 <br/>
 <div *ngFor ="let data of dataArr">

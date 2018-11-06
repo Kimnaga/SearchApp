@@ -1,3 +1,38 @@
+<div style="margin-left: 5em; margin-right:5em; margin-top:1em;">
 <p>
-  home works!
+In this example, I build an application that has three views and two different api calls to external web services. The first view is Search History View.
+The second view is wikipedia search based on the users search text. 
+The results will contain the closest matches returned from wikipedia. 
+The last view is a request to giphy.com, returning giphys related to the users search text. 
 </p>
+<br/>
+
+<p>
+PART - 1
+add a link to app component that navigates to a searchHistory component. Include a route for the searchHistory component.
+The search history component should include a link to navigate to other views.
+</p>
+
+<br/>
+<p>
+PART - 2
+In the app component bind an input element to capture the users search text.
+Create a service that searches wikipedia for the user search text and returns a promise that displays the results in the app component view. For example, a wiki search of 
+"dog" returns the text "Dog Dog meat Dogs in warfare Dog behavior". The search history component should display the users search history and a timestamp for each search. There should be a corresponding array storing the users searches.
+ADD THE USERS SEARCH HISTORY TO A LIST ’searchHistory' IN  FIREBASE. THE PAYLOAD SHOULD LOOK LIKE THIS searchHistory searchType: ’Wiki’, searchText: ‘dog’, createdAt: ’timestamp'
+</p>
+
+<br/>
+<p>
+PART-3
+Create my own giphy account at the following url "https://developers.giphy.com/explorer/" . 
+I can login and signup using my email.
+Use the developers console to generate a query like the following request url for dog giphyus "https://api.giphy.com/v1/gifs/search?api_key=[YOUR-API-KEY]&q=dog&limit=5&offset=0&rating=G&lang=en".
+Create a new service that sends a request to the giphy api using the above url. the returned search results should be a json payload containing giphys related to the users search text.  The user search text should be added to the api request as the “q” parameter in the above url in the app component display at least one of the giphy responsem images.                    
+Do this by creating an img element in the app component binding a giphy url to the src attribute of the image element. 
+In the case of the dog query the url can be found in the response payload like this "data" : "images": "fixed_height_downsampled" : "url": "https://media1.giphy.com/media/12pJ8OxSWwO86Y/200_d.gif"
+</p>
+
+</div>
+
+

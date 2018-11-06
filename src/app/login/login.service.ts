@@ -58,6 +58,20 @@ export class LoginService {
           this.error = err;
         })
     }
+
+    signup(form){
+      console.log("in signup "+ form.email);
+      this.af.auth.createUserWithEmailAndPassword(form.email, form.password)
+      .then (()=> {
+        this.router.navigate ([('/wikiSearch')]);
+      })
+      .catch ((err) =>{
+        console.log(err);
+        this.error = err;
+      })
+    }
+
+
     
     signOut(){
       this.af.auth.signOut();

@@ -27,7 +27,7 @@ import {AuthGuard}from './login/auth.guard';
     LoginComponent,
     WikiSearchComponent,
     HomeComponent,
-    GiphyComponent
+    GiphyComponent,
 
   ],
   imports: [

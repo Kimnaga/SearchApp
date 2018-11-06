@@ -30,5 +30,12 @@ export class LoginComponent implements OnInit {
     } 
   }
 
+  onSignup () : void{
+    if (this.loginForm.valid){
+      console.log("in signup ");
+      this.service.signup (this.loginForm.value);
+    } 
+  }
+
 
 }

@@ -1,7 +1,8 @@
 <h4>Wiki Search</h4>
-<input [(ngModel)] = "searchText"  type ="text" placeholder = "Search..."> 
-<button (click)=getWiki()> Get Wiki</button>
-
+<div class="form-inline">
+  <input [(ngModel)] = "searchText"  class="form-control" type ="text" placeholder = "Search..."> 
+  <button class="btn btn-primary" style="margin-left:10px;"(click)=getWiki()> Get Wiki</button>
+</div>
 
 <div *ngFor ="let result of resArr">
   
